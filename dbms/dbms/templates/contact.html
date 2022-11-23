@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+</head>
+<body>
+    
+    {% load static %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>home</title>
+    </head>
+    <body>
+    
+    
+         <!-- ADEEMA FORM 1 -->
+         <center>
+            <div id="maindiv" >
+                <div id="div1">
+                    <form onclick="mclick()" onmouseleave="mleave()" enctype="multipart/form-data" onmouseenter="menter()" id="form" method="POST" action="/">
+                        {% csrf_token %}
+                        <pre> <H1>name         <input id="name" placeholder="Name" name="my_name" type="text"></H1></pre>
+                        <pre> <H1>age          <input id="age" placeholder="age" name="age" type="number"></H1></pre>
+                        <pre> <H1>password     <input id="password" placeholder="password" name="password" type="password"></H1></pre>
+                        <pre> <H1>email        <input id="email" placeholder="email" name="email" type="email"></H1></pre>
+                        <pre> <H1>father_name  <input id="father_name" placeholder="father_name" name="father_name" type="text"></H1></pre>
+                        <pre> <H1>our_image    <input id="image" placeholder="image" name="our_image" type="file"></H1></pre>
+                        <pre> <H1><button id="submit" type="submit">Submit</button> </H1></pre>
+                  
+                    </form>
+                </div>
+            </div>
+        </center>
+    
+    <center>
+        <h1>{{d}}</h1><br>
+              <h1>{{name}}</h1><br>
+                        <h1>{{age}}</h1><br>
+                        <h1>{{password}}</h1><br>
+                        <h1>{{email}}</h1><br>
+                        <h1>{{father_name}}</h1><br>
+                        <h1><img src="{{our_image.url}}" alt="saD"></h1><br>
+    </center>
+            <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 10px;
+                padding: 10px;
+            }
+    
+             #form {
+                background-color: rgb(29, 191, 20);
+                text-align: left;
+                border-radius: 30px;
+                width: 500px;
+                height: 600px;
+                margin: 10px;
+                padding: 10px;
+            }
+    
+    
+            #maindiv {
+                background-color: rgb(255, 203, 60);
+                border-radius: 30px;
+                width: 650px;
+                height: 800px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+    
+            #div1 {
+                background-color: rgb(234, 16, 161);
+                border-radius: 30px;
+                width: 600px;
+                height: 700px;
+                margin: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+           
+            input{
+                width: 200px;
+                height: 30px;
+                text-align: center;
+                font-size: 20px;
+                border-radius: 30px;
+                box-shadow: 30px wheat;
+    
+            }
+            
+            #submit {
+                background-color: red;
+                color: rgb(0, 0, 0);
+                font-size: 20px;
+                border-radius: 10px;
+    
+            }
+    
+    
+    
+    
+    </style>
+    
+    
+    
+    
+    <script>
+    
+        function menter(){
+            document.getElementById('form').style.backgroundColor = "blue"
+        }
+        function mleave(){
+            document.getElementById('form').style.backgroundColor = "green"
+        }
+        function mclick(){
+            document.getElementById('form').style.backgroundColor = "yellow"
+        }
+    
+    </script>
+    
+    <!-- help for data entry -->
+    <!-- name         
+    age          
+    password     
+    email        
+    father_name  
+    our_image     -->
+    
+    </body>
+    </html>
+    
+</body>
+</html>
